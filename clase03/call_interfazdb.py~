@@ -1,0 +1,5 @@
+import sqlite3, sys
+from PyQt5.QtWidgets import QDialog, QApplication
+from sqlite3 import Error
+from interfazgestordb import *
+
