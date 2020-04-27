@@ -18,11 +18,10 @@ class MyForm(QDialog):
             self.ui.labelResponse.setText("Error creando la base de datos")
         finally:
             conn.close()
-        conn = sqlite3.connect(self.ui.lineEditDBName.text()+".db")
-        self.ui.labelResponse.setText("Se creo la db")
-        conn.close()
+#       
 if __name__=="__main__":
     app = QApplication(sys.argv)
     w = MyForm()
     w.show()
     sys.exit(app.exec_())
+# Ahora para compilar el ejecutable usamos pyinstaller
