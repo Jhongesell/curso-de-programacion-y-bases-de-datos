@@ -12,12 +12,15 @@ class MyForm(QDialog):
         self.show()
     def createDatabase(self):
         try:
-            conn = sqlite3.connect(self.ui.lineEditDBName.test()+".db")
+            conn = sqlite3.connect(self.ui.lineEditDBName.text()+".db")
             self.ui.labelResponse.setText("La base de datos ha sido creada")
         except Error as e:
             self.ui.labelResponse.setText("Error creando la base de datos")
         finally:
             conn.close()
+        conn = sqlite3.connect(self.ui.lineEditDBName.text()+".db")
+        self.ui.labelResponse.setText("Se creo la db")
+        conn.close()
 if __name__=="__main__":
     app = QApplication(sys.argv)
     w = MyForm()

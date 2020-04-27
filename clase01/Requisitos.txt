@@ -1,0 +1,6 @@
+Tecnologías:
+* Anaconda como gestor de Python.
+	** Librerías: PyQt5 , SQLite3, Django
+* Cuanta para acceder a Google Colab Research.
+* Qt Designer 5.
+
