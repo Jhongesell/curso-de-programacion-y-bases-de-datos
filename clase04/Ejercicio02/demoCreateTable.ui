@@ -72,7 +72,13 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxDataType"/>
+        <widget class="QComboBox" name="comboBoxDataType">
+         <item>
+          <property name="text">
+           <string>integer</string>
+          </property>
+         </item>
+        </widget>
        </item>
       </layout>
      </item>

@@ -1,0 +1,10 @@
+Control de lectura: Programación Orientada a Objetos
+
+¿Cuales son las partes de una clase en POO?
+¿Se puede heredar al método __init__?, Explique lo que ocurre.
+¿Por qué al final de nuestro código ponemos if __name__ == '__main__':?, ¿Para que se hace ello?
+¿Desde su punto de vista es mejor utilizar un lenguaje como C++ para trabajar con expresiones polimórficas aplicado en su campo?
+¿Cite algún caso donde usted podría hacer uso del polimorfismo en cuanto a todo lo visto en el presente ciclo?
+
+
+El código visto en Python a ¿cuál versión corresponde?
