@@ -2,7 +2,10 @@
 
 # Agregados del tutorial
 
-from django.http import HttpResponse
+#from django.http import HttpResponse #temporal
+#from django.template import loader #temporal
+
+from django.shortcuts import render # agregado
 
 from .models import Question
 
@@ -11,16 +14,16 @@ from .models import Question
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    output = ', '.join([q.question_text for q in latest_question_list])
-    return HttpResponse(output)
+    #template = loader.get_template('polls/index.html')
+    context = {'latest_question_list': latest_question_list}
+    return render(request, 'polls/index.html', context)
 
-def detail(request, question_id):
-    return HttpResponse("Tu estas viendo la consulta %s." % question_id)
+#def detail(request, question_id):
+ #   return HttpResponse("Tu estas viendo la consulta %s." % question_id)
 
-def results(request, question_id):
-    #response = "You're looking at the results of question %s."
-    response = "Tu estas viendo el resultado de la consulta %s."
-    return HttpResponse(response % question_id)
+#def results(request, question_id):
+#    response = "Tu estas viendo el resultado de la consulta %s."
+ #   return HttpResponse(response % question_id)
 
-def vote(request, question_id):
-    return HttpResponse("Tu estas votando por la consulta %s." % question_id)
+#def vote(request, question_id):
+ #   return HttpResponse("Tu estas votando por la consulta %s." % question_id)
